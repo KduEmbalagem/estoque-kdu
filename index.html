@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estoque KDU — Planilhas</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0D1B2A;
+      padding: 20px 16px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #00A8E8;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: #64748b;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .sync-info {
+      background: #1B4F72;
+      color: #7dd3fc;
+      font-size: 11px;
+      text-align: center;
+      padding: 6px 16px;
+    }
+
+    .sync-info span {
+      color: #00ff88;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 16px 12px 32px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 20px 0 8px 4px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    .card a {
+      display: flex;
+      align-items: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: inherit;
+      gap: 14px;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-info {
+      flex: 1;
+    }
+
+    .card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.3;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 20px;
+      margin-top: 4px;
+    }
+
+    .badge-sync {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+
+    .badge-manual {
+      background: #f1f5f9;
+      color: #64748b;
+    }
+
+    .card-arrow {
+      color: #cbd5e1;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Cores por categoria */
+    .color-1  { background: #e0f2fe; }
+    .color-2  { background: #fce7f3; }
+    .color-3  { background: #fef9c3; }
+    .color-4  { background: #dcfce7; }
+    .color-5  { background: #ede9fe; }
+    .color-6  { background: #ffedd5; }
+    .color-7  { background: #cffafe; }
+    .color-8  { background: #fee2e2; }
+    .color-9  { background: #d1fae5; }
+    .color-10 { background: #fef3c7; }
+    .color-11 { background: #e0e7ff; }
+    .color-12 { background: #fce7f3; }
+    .color-13 { background: #f0fdf4; }
+    .color-14 { background: #fff7ed; }
+    .color-15 { background: #f0f9ff; }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      padding: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📦 KDU Embalagens</h1>
+  <p>Consulta de Estoque · Setor de Compras</p>
+</header>
+
+<div class="sync-info">
+  Planilhas com <span>⚡ SYNC</span> são atualizadas automaticamente pelo sistema
+</div>
+
+<div class="container">
+
+  <div class="section-label">Sincronizadas automaticamente</div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1h0QcXSnx_f87K3ENsyNaDJANSFKFIu8kDoEtsj6BhIg/edit" target="_blank">
+      <div class="card-icon color-1">🛍️</div>
+      <div class="card-info">
+        <div class="card-name">Sacolas Plásticas Nacional</div>
+        <span class="card-badge badge-sync">⚡ SYNC automático</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1hlDO5G4qjJi7OonWetR3NiqqqN5eG0XUlrqXMOX9Fgs/edit" target="_blank">
+      <div class="card-icon color-4">🏷️</div>
+      <div class="card-info">
+        <div class="card-name">Fabricados (Cartelas, Talões, Caixas, Sacola de Papel)</div>
+        <span class="card-badge badge-sync">⚡ SYNC automático</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="section-label">Demais planilhas</div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1td6cAfNZ0iJiBRV26b6yKHwkjZ7L5Gat_s-SWP7S4yQ/edit" target="_blank">
+      <div class="card-icon color-2">📌</div>
+      <div class="card-info">
+        <div class="card-name">Acetatos, Tarraxas e Pino Tag</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1Yf70bARjciv8ncAxwuxKSwQzk62JZuHY9lELNwTbjpI/edit" target="_blank">
+      <div class="card-icon color-3">🎨</div>
+      <div class="card-info">
+        <div class="card-name">Adesivos</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1-XxrBhLTCZIMmQAjdQ2QPBASt7t2Oj92krDj8BsWVXY/edit" target="_blank">
+      <div class="card-icon color-5">🎁</div>
+      <div class="card-info">
+        <div class="card-name">Caixas de Presente</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1azVg__ZJd_AOXzlHS3GM71erUCw6pL97A2rwVlyCuGY/edit" target="_blank">
+      <div class="card-icon color-6">📦</div>
+      <div class="card-info">
+        <div class="card-name">Elásticos, Fitas e Caixas — Revenda e Consumo</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1NI_KgvhVegDCBO3Tub1j6hij7XgptGIAlrgKfoSL3PI/edit" target="_blank">
+      <div class="card-icon color-7">🗂️</div>
+      <div class="card-info">
+        <div class="card-name">Expositores</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1mq5ByIox_67lOXvq3NK-eyJPRMV8Hn76y-DAp3PR-eQ/edit" target="_blank">
+      <div class="card-icon color-8">🎀</div>
+      <div class="card-info">
+        <div class="card-name">Laços, Fitilhos e Fecho Prático</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/12QsG-kpUdjlYrwl6ucAMgdJqpBMcaEXCkk9HOdICBWU/edit" target="_blank">
+      <div class="card-icon color-9">💼</div>
+      <div class="card-info">
+        <div class="card-name">Maletas</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1hNc6xYjOSL1eUHLc2PG6gNgAUQbYZPmiPLnqhI403eI/edit" target="_blank">
+      <div class="card-icon color-10">✨</div>
+      <div class="card-info">
+        <div class="card-name">Organza / Lamê / Veludo</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1JzugM9csy__KnpEJ8j7VsEbrIoiuan3UWj-vJDGe_xE/edit" target="_blank">
+      <div class="card-icon color-11">🔷</div>
+      <div class="card-info">
+        <div class="card-name">Placas Acrílicas</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1EOXKh1C5kjU2C3G8OqytuV9a3qsK11QN7opChUB-T3w/edit" target="_blank">
+      <div class="card-icon color-12">🎀</div>
+      <div class="card-info">
+        <div class="card-name">Saco de Presente e Papel Seda</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1B4LCLXdNf18DwWe86r-KFXRa0ozM287DPgCrc4kMyGQ/edit" target="_blank">
+      <div class="card-icon color-13">🛍️</div>
+      <div class="card-info">
+        <div class="card-name">Saco Transparente</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1L6XlXqUhFDR66ukpYbwHlQO7-jIl-uJNqFR9hT-sSY4/edit" target="_blank">
+      <div class="card-icon color-14">🌍</div>
+      <div class="card-info">
+        <div class="card-name">Sacolas Plásticas e de Papel Importadas</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://docs.google.com/spreadsheets/d/1SN6UQttkDOoJtUf4V_Kx_erQS9VHpV12XqH21Ux4p_0/edit" target="_blank">
+      <div class="card-icon color-15">💍</div>
+      <div class="card-info">
+        <div class="card-name">Trava Anel e Cordão</div>
+        <span class="card-badge badge-manual">Manual</span>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+  </div>
+
+</div>
+
+<footer>KDU Embalagens · Setor de Compras</footer>
+
+</body>
+</html>
